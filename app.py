@@ -1,4 +1,5 @@
 from flask import Flask
+from flask import request
 
 app = Flask(__name__)
 hackathons = {
@@ -22,7 +23,10 @@ def hello_world():
 
 @app.route('/hackathons', methods=['GET'])
 def getHackatons():
-    return hackathons
+    if request.method == 'POST':
+        hackathons[request.json]
+    else:
+        return hackathons
 
 if __name__=="__main__":
     app.run(debug = True)
