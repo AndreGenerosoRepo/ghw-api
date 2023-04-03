@@ -21,7 +21,7 @@ hackathons = {
 def hello_world():
     return "<p>Hello , thank you 404 last commit !!!</p>"
 
-@app.route('/hackathons', methods=['GET'])
+@app.route('/hackathons', methods=['GET', 'POST'])
 def getHackatons():
     if request.method == 'POST':
         hackathons["New Hackathon"] = request.json
