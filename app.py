@@ -20,7 +20,7 @@ hackathons = {
 def hello_world():
     return "<p>Hello , thank you 404 last commit !!!</p>"
 
-@app.route('/getHackatons', methods=['GET'])
+@app.route('/getHackathons', methods=['GET'])
 def getHackatons():
     return hackathons
 
